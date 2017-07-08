@@ -1,0 +1,17 @@
+运行之后会显示当前连接设备的屏幕信息，如下图，LVDS和VGA-0，而HDMI屏幕为disconnect，意为没有连接
+(1)打开外接显示器，双屏幕显示相同的内容--克隆，（auto为最高分辨率）
+CODE：     xrandr --output VGA-0 --same-as LVDS --auto
+
+(2)若要指定外接显示器的分辨率可以使用下面的命令（1280*1024）：
+CODE：     xrandr --output VGA-0 --same-as LVDS --mode 1280x1024
+
+(3)打开外接显示器，设置为右侧扩展
+CODE：    xrandr --output VGA-0 --right-of LVDS --auto
+
+(4)关闭显示器
+CODE：    xrandr --output VGA-0 --off
+
+(5)打开VGA-0接口显示器，关闭LVDS接口显示器
+CODE：    xrandr --output VGA-0 --auto --output LVDS --off
+
+xrandr --output DP-1 --auto --output LVDS-1 --off

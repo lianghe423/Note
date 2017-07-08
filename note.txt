@@ -1,0 +1,58 @@
+
+    Dowload coq8.5
+    ./configure -prefix path_to_install_coq
+    make && make install.
+    vim ~/.bashrc
+    add command "export coq85bin=path_to_install_coq" to .bashrc
+    cd CertiuCOS2/coqimp
+    make -j4 certiucos/proofs/ucos_correct.vo (32G Memory at least)
+
+
+https://github.com/lianghe423    lianghe423 zhanglianghe423
+
+gsettings set com.canonical.Unity.Launcher launcher-position Bottom
+
+http://github.com/ProofGeneral/PG
+
+
+
+
+打开终端开启root账户 :sudo passwd -u root
+
+输入当前用户的密码
+ubuntu-kylin 怎么用root用户登录
+
+为root账户设置密码：sudo passwd root
+
+设置root密码，输入两次
+ubuntu-kylin 怎么用root用户登录
+
+测试root账户： su -
+
+输入root密码，进入root终端
+ubuntu-kylin 怎么用root用户登录
+
+root账户开启成功 ，退出root账户 exit
+ubuntu-kylin 怎么用root用户登录
+
+设置登录面板，使其实现root登录
+
+进入 /usr/share/lightdm/lightdm.conf.d/
+ubuntu-kylin 怎么用root用户登录
+
+编辑: 50-unity-greeter.config
+
+添加如下代码,保存退出
+
+user-session=ubuntu
+
+greeter-show-manual-login=true
+
+all-guest=false
+ubuntu-kylin 怎么用root用户登录
+
+重启ubuntu-kulin
+ubuntu-kylin 怎么用root用户登录
+8
+
+成功实现root登录，终端显示
